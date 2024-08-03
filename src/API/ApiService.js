@@ -1,4 +1,5 @@
 import { API_BASE_URL } from "./app-config";
+
 const ACCESS_TOKEN = "ACCESS_TOKEN";
 
 export function call(api, method, request) {
@@ -76,3 +77,4 @@ export function checkUserId(userDTO) {
             alert("중복된 아이디가 존재합니다. 다시 입력해주세요.");
         });
 }
+

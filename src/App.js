@@ -68,10 +68,9 @@ import GlobalContext, { GlobalContextProvider } from './GlobalContext';
 import EventModal from './Calendar/EventModal';
 import Login from './Login';
 import Register from './Register';
-import AndnMain from './Main/AndnMain';
 import ClientMain from './Main/ClientMain';
 import OutsourcingMain from './Main/OutsourcingMain';
-import PrivateRoute from './PrivateRoute'; // Import PrivateRoute
+import PrivateRoute from './PrivateRoute';
 
 function CalendarApp() {
   const [currentMonth, setCurrentMonth] = useState(getMonth());
@@ -103,10 +102,10 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route
-            path="/AndnMain"
+            path="/calendar"
             element={
               <PrivateRoute>
-                <AndnMain />
+                <CalendarApp />
               </PrivateRoute>
             }
           />
@@ -126,14 +125,6 @@ function App() {
               </PrivateRoute>
             }
           />
-          <Route
-            path="/calendar"
-            element={
-              <PrivateRoute>
-                <CalendarApp />
-              </PrivateRoute>
-            }
-          />
         </Routes>
       </Router>
     </GlobalContextProvider>
@@ -141,4 +132,3 @@ function App() {
 }
 
 export default App;
-

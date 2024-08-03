@@ -4,7 +4,7 @@ import GlobalContext from './GlobalContext';
 import { Box, TextField, Button, Container, Typography, Paper, Grid, InputAdornment, IconButton, Divider } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import Andnlogo from './assets/andnlogo.png';
+import Andnlogologin from './assets/andnlogologin.png';
 import { signin } from './API/ApiService'; // Import signin function
 
 const Login = () => {
@@ -33,7 +33,7 @@ const Login = () => {
         // 사용자 타입에 따라 리다이렉트
         switch (userType) {
           case 'ROLE_ANDN':
-            navigate('/AndnMain');
+            navigate('/calendar');
             break;
           case 'ROLE_CLIENT':
             navigate('/ClientMain');
@@ -71,7 +71,7 @@ const Login = () => {
   return (
     <Container component="main" maxWidth="xs">
       <Typography component="h2" variant="h1" align="center" sx={{ marginTop: 4 }}>
-        <img src={Andnlogo} alt="And N" height={70} style={{ filter: 'invert(1)' }} />
+        <img src={Andnlogologin} alt="And N" height={70} style={{ filter: 'invert(1)' }} />
       </Typography>
       <Paper elevation={5} sx={{ padding: 2, marginTop: 2 }}>
         <Box component="form" noValidate sx={{ mt: 1 }} onKeyDown={handleKeyDown}>
