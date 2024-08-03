@@ -132,3 +132,11 @@ function App() {
 }
 
 export default App;
+
+/*
+ TODO: 8/3
+ - 로그인 이후 새로고침하면 팅김(로그인 화면으로) 
+ - tailwind 안먹힘(원인X)
+ - 달이동 버튼 동작 X
+ - mui 깨짐(원인X)
+ */
